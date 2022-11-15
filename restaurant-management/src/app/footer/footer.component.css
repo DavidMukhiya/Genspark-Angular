@@ -1,0 +1,19 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    background-color: rgb(30, 27, 27);
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+ }
+
+ .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    /* border: 3px solid green; */
+  }
