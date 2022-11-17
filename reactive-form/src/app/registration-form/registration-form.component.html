@@ -1,4 +1,4 @@
-<div class="custom">
+<div class="custom form">
   <p>{{ title }}</p>
   <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
     <input
@@ -54,7 +54,7 @@
     <br />
 
     <input
-      type="password"
+      type="text"
       placeholder="Enter Password"
       name="password"
       formControlName="password"
@@ -69,7 +69,7 @@
     <button [disabled]="registrationForm.invalid">Register</button>
   </form>
 </div>
-<div class="custom">
+<div class="custom guide">
   <h2>Registration Guide</h2>
   <p>
     *First Name and Last Name shouldn't contain Number. It's min length is 3 and
