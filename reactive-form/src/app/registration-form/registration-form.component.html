@@ -1,0 +1,12 @@
+<p>{{title}}</p>
+<form [formGroup]="registrationForm" (ngSubmit)="registerUser()" >
+  <input type="text" placeholder="Enter Name" name="user" formControlName="user"/>
+  <br /><br />
+  <input type="email" placeholder="Enter Your Email" name="'email" formControlName="email"/>
+  <br /><br />
+  <input type="number" placeholder="Enter your age" name="'age" formControlName="age"/>
+  <br/><br/>
+  <input type="password" placeholder="Enter Password" name="password" formControlName="password"/>
+  <br /><br />
+  <button>Register</button>
+</form>
