@@ -1,12 +1,84 @@
-<p>{{title}}</p>
-<form [formGroup]="registrationForm" (ngSubmit)="registerUser()" >
-  <input type="text" placeholder="Enter Name" name="user" formControlName="user"/>
-  <br /><br />
-  <input type="email" placeholder="Enter Your Email" name="'email" formControlName="email"/>
-  <br /><br />
-  <input type="number" placeholder="Enter your age" name="'age" formControlName="age"/>
-  <br/><br/>
-  <input type="password" placeholder="Enter Password" name="password" formControlName="password"/>
-  <br /><br />
-  <button>Register</button>
-</form>
+<div class="custom">
+  <p>{{ title }}</p>
+  <form [formGroup]="registrationForm" (ngSubmit)="registerUser()">
+    <input
+      type="text"
+      placeholder="Enter Your First Name"
+      name="firstName"
+      formControlName="firstName"
+    />
+    <br />
+    <span
+      style="color: red"
+      *ngIf="firstName && firstName.invalid && firstName.touched"
+      >Invalid First Name</span
+    >
+    <br />
+
+    <input
+      type="text"
+      placeholder="Enter Your Last Name"
+      name="lastName"
+      formControlName="lastName"
+    />
+    <br />
+    <span
+      style="color: red"
+      *ngIf="lastName && lastName.invalid && lastName.touched"
+      >Invalid Last Name</span
+    >
+    <br />
+
+    <input
+      type="email"
+      placeholder="Enter Your Email"
+      name="'email"
+      formControlName="email"
+    />
+    <br />
+    <span style="color: red" *ngIf="email && email.invalid && email.touched"
+      >Invalid Email</span
+    >
+    <br />
+
+    <input
+      type="number"
+      placeholder="Enter your age"
+      name="'age"
+      formControlName="age"
+    />
+    <br />
+    <span style="color: red" *ngIf="age && age.invalid && age.touched"
+      >Invalid Age</span
+    >
+    <br />
+
+    <input
+      type="password"
+      placeholder="Enter Password"
+      name="password"
+      formControlName="password"
+    />
+    <br />
+    <span
+      style="color: red"
+      *ngIf="password && password.invalid && password.touched"
+      >Invalid Password</span
+    >
+    <br />
+    <button [disabled]="registrationForm.invalid">Register</button>
+  </form>
+</div>
+<div class="custom">
+  <h2>Registration Guide</h2>
+  <p>
+    *First Name and Last Name shouldn't contain Number. It's min length is 3 and
+    max length is 20.
+  </p>
+  <p>Enter the valid email address.</p>
+  <p>
+    *Password should contain atleast 1 numeric character, atleast one special
+    character (!@#$%^&*()-) and min length is 8 and max length is 16.
+  </p>
+  <p>*Min age is 23 and max age 55.</p>
+</div>
