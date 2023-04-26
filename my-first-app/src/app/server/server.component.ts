@@ -13,7 +13,7 @@ export class ServerComponent {
   serverId: number = 10;
   serverStatus: string = 'offline';
   username: string ='';
-  isEmpty: boolean=true;
+  isEmpty: boolean=false;
 
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -28,10 +28,6 @@ export class ServerComponent {
   }
 
   resetUsername(){
-    if(this.username.length!==0){
-      this.username="";
-    }else{
-      
-    }
+   this.username='';
   }
 }
