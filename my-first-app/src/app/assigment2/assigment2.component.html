@@ -1,0 +1,8 @@
+<div>
+    <button class="btn btn-primary" (click)="onToggle()">Display Details</button>
+    <p *ngIf="showSecret">Hi how are you?</p>
+    <div *ngFor="let logItem of log"
+    [ngStyle]="{backgroundColor:logItem >=5 ?'blue':'transparent'}"
+    [ngClass]="{'white-text': logItem >=5 }">{{logItem}}
+    </div>
+</div>
