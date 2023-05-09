@@ -13,6 +13,10 @@ export class RecipeListComponent implements OnInit {
       'A Test Recipe',
       'This is simply a test',
       'https://www.eatwell101.com/wp-content/uploads/2017/05/easy-chicken-dinner-ideas.jpg'
+    ),new Recipe(
+      'Another Test Recipe',
+      'This is another test recipe',
+      'https://www.eatwell101.com/wp-content/uploads/2017/05/easy-chicken-dinner-ideas.jpg'
     ),
   ];
   constructor() {}
